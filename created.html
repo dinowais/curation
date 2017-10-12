@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title><!DOCTYPE html>
 <!-- saved from url=(0053)file:///Users/owaismushtaq/Desktop/curation/main.html -->
 <html>
 <head>
@@ -10,6 +6,8 @@
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
             integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
             crossorigin="anonymous"></script>
@@ -19,6 +17,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
             integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
             crossorigin="anonymous"></script>
+    <script src="./main_files/progressbar.js" type="text/javascript"></script>
+    <script src="./main_files/progressbar_table.js" type="text/javascript"></script>
     <link href="./main_files/css" rel="stylesheet" type="text/css">
 
     <link href="./main_files/font-awesome.min.css" rel="stylesheet">
@@ -29,24 +29,16 @@
 <div class="container">
     <div class="row">
         <div id="integration-list">
-                    <h3>New Investigators</h3>
+            <h3>New Investigators Created</h3>
 
             <ul>
+
                 <li class="data_list" data-toggle="tooltip" title="Compare with Existing record">
                     <a class="expand">
+                        <div class="right-arrow pull-right">+</div>
                         <div>
                             <div class="row inv_heading">
                                 <h5 class="inv_name col-md-4">John Smith </h5>
-                                <h6 class="col-md-7 merge_score">
-                                    <div class="progress" style="display: none">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped"
-                                             role="progressbar"
-                                             aria-valuenow="90.5%" aria-valuemin="0" aria-valuemax="100"
-                                             style="width:90.5%">
-                                            90.5% Merge Score
-                                        </div>
-                                    </div>
-                                </h6>
                             </div>
 
                         </div>
@@ -74,23 +66,78 @@
                             </div>
                         </div>
                     </a>
+
+                    <div class="existing_record" style="display: none;">
+                        <hr>
+                        <h4>Top Investigators Matching Existing Record</h4>
+                        <div class="card-block p-0">
+                            <table class="table table-bordered table-sm m-0">
+                                <thead class="">
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>City/State</th>
+                                    <th>Therapeutic area</th>
+                                    <th>Match Score</th>
+                                    <th>Merge</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>John <span class="progress_table fn" data-per="1.0" id="a"></span></td>
+                                    <td>Smith <span class="progress_table ln" data-per="1.0" id="b"></span></td>
+                                    <td>Hangzhou /Zhejiang <span class="progress_table fn" data-per="0.7" id="c"></span>
+                                    </td>
+                                    <td>Bacterial Infec <span class="progress_table fn" data-per="0.6" id="d"></span>
+                                    </td>
+                                    <td>80%</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>John<span class="glyphicon glyphicon-ok-circle pull-right check-icon"></span>
+                                    </td>
+                                    <td>Smth</td>
+                                    <td>Hangzhou</td>
+                                    <td>Infections</td>
+                                    <td>79%</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Jane</td>
+                                    <td>Smith<span class="glyphicon glyphicon-ok-circle pull-right check-icon"></span
+                                    </td>
+                                    <td>Zhejiang</td>
+                                    <td>Bacterial Infections</td>
+                                    <td>75%</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </li>
                 <li class="data_list stripped" data-toggle="tooltip" title="Compare with Existing record">
                     <a class="expand">
-                        <!--<div class="right-arrow pull-right">+</div>-->
+                        <div class="right-arrow pull-right">+</div>
                         <div>
                             <div class="row inv_heading">
                                 <h5 class=" inv_name col-md-4">Edward Murphy</h5>
-                                <h6 class="col-md-7 merge_score" style="display: none">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped"
-                                             role="progressbar"
-                                             aria-valuenow="100%" aria-valuemin="0" aria-valuemax="100"
-                                             style="width:100%">
-                                            100% Merge Score
-                                        </div>
-                                    </div>
-                                </h6>
+
                             </div>
 
                         </div>
@@ -122,52 +169,59 @@
                     <div class="existing_record" style="display: none;">
                         <hr>
                         <h4>Existing Record</h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>First Name : Edward</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Last Name: Murphy</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Email :murphy@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>Country : United States</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>City/State : Vero Beach</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Therapeutic area : Nervous System Diseases</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8"></div>
-                            <div class="col">
-                                <button type="button" class="btn btn-primary pull-right">Demerge</button>
-                                <!--<button type="button" class="btn btn-success">Create New</button>-->
-                            </div>
+                        <div class="card-block p-0">
+                            <table class="table table-bordered table-sm m-0">
+                                <thead class="">
+                                <tr>
+
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>City/State</th>
+                                    <th>Therapeutic area</th>
+                                    <th>De Merge</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+
+                                    <td>Edward</td>
+                                    <td>Murphy</td>
+                                    <td>Vero Beach</td>
+                                    <td>Nervous System Diseases</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>Edward</td>
+                                    <td>Smth</td>
+                                    <td>Beach</td>
+                                    <td>Nervous System Diseases</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </li>
                 <li class="data_list" data-toggle="tooltip" title="Compare with Existing record">
                     <a class="expand">
+                        <div class="right-arrow pull-right">+</div>
                         <div>
                             <div class="row inv_heading">
                                 <h5 class="inv_name col-md-4">John Smith </h5>
-                                <h6 class="col-md-7 merge_score">
-                                    <div class="progress" style="display: none">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped"
-                                             role="progressbar"
-                                             aria-valuenow="90.5%" aria-valuemin="0" aria-valuemax="100"
-                                             style="width:90.5%">
-                                            90.5% Merge Score
-                                        </div>
-                                    </div>
-                                </h6>
+
                             </div>
 
                         </div>
@@ -195,23 +249,60 @@
                             </div>
                         </div>
                     </a>
+
+                    <div class="existing_record" style="display: none;">
+                        <hr>
+                        <h4>Existing Record</h4>
+                        <div class="card-block p-0">
+                            <table class="table table-bordered table-sm m-0">
+                                <thead class="">
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>City/State</th>
+                                    <th>Therapeutic area</th>
+                                    <th>De Merge</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Smith</td>
+                                    <td>Hangzhou /Zhejiang</td>
+                                    <td>Bacterial Infections</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Smth</td>
+                                    <td>Hangzhou</td>
+                                    <td>Infections</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </li>
                 <li class="data_list stripped" data-toggle="tooltip" title="Compare with Existing record">
                     <a class="expand">
-                        <!--<div class="right-arrow pull-right">+</div>-->
+                        <div class="right-arrow pull-right">+</div>
                         <div>
                             <div class="row inv_heading">
                                 <h5 class=" inv_name col-md-4">Edward Murphy</h5>
-                                <h6 class="col-md-7 merge_score" style="display: none">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped"
-                                             role="progressbar"
-                                             aria-valuenow="100%" aria-valuemin="0" aria-valuemax="100"
-                                             style="width:100%">
-                                            100% Merge Score
-                                        </div>
-                                    </div>
-                                </h6>
+
                             </div>
 
                         </div>
@@ -243,52 +334,59 @@
                     <div class="existing_record" style="display: none;">
                         <hr>
                         <h4>Existing Record</h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>First Name : Edward</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Last Name: Murphy</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Email :murphy@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>Country : United States</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>City/State : Vero Beach</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Therapeutic area : Nervous System Diseases</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8"></div>
-                            <div class="col">
-                                <button type="button" class="btn btn-primary pull-right">Demerge</button>
-                                <!--<button type="button" class="btn btn-success">Create New</button>-->
-                            </div>
+                        <div class="card-block p-0">
+                            <table class="table table-bordered table-sm m-0">
+                                <thead class="">
+                                <tr>
+
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>City/State</th>
+                                    <th>Therapeutic area</th>
+                                    <th>De Merge</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+
+                                    <td>Edward</td>
+                                    <td>Murphy</td>
+                                    <td>Vero Beach</td>
+                                    <td>Nervous System Diseases</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>Edward</td>
+                                    <td>Smth</td>
+                                    <td>Beach</td>
+                                    <td>Nervous System Diseases</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </li>
                 <li class="data_list" data-toggle="tooltip" title="Compare with Existing record">
                     <a class="expand">
+                        <div class="right-arrow pull-right">+</div>
                         <div>
                             <div class="row inv_heading">
                                 <h5 class="inv_name col-md-4">John Smith </h5>
-                                <h6 class="col-md-7 merge_score">
-                                    <div class="progress" style="display: none">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped"
-                                             role="progressbar"
-                                             aria-valuenow="90.5%" aria-valuemin="0" aria-valuemax="100"
-                                             style="width:90.5%">
-                                            90.5% Merge Score
-                                        </div>
-                                    </div>
-                                </h6>
+
                             </div>
 
                         </div>
@@ -316,23 +414,60 @@
                             </div>
                         </div>
                     </a>
+
+                    <div class="existing_record" style="display: none;">
+                        <hr>
+                        <h4>Existing Record</h4>
+                        <div class="card-block p-0">
+                            <table class="table table-bordered table-sm m-0">
+                                <thead class="">
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>City/State</th>
+                                    <th>Therapeutic area</th>
+                                    <th>De Merge</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Smith</td>
+                                    <td>Hangzhou /Zhejiang</td>
+                                    <td>Bacterial Infections</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Smth</td>
+                                    <td>Hangzhou</td>
+                                    <td>Infections</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </li>
                 <li class="data_list stripped" data-toggle="tooltip" title="Compare with Existing record">
                     <a class="expand">
-                        <!--<div class="right-arrow pull-right">+</div>-->
+                        <div class="right-arrow pull-right">+</div>
                         <div>
                             <div class="row inv_heading">
                                 <h5 class=" inv_name col-md-4">Edward Murphy</h5>
-                                <h6 class="col-md-7 merge_score" style="display: none">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped"
-                                             role="progressbar"
-                                             aria-valuenow="100%" aria-valuemin="0" aria-valuemax="100"
-                                             style="width:100%">
-                                            100% Merge Score
-                                        </div>
-                                    </div>
-                                </h6>
+
                             </div>
 
                         </div>
@@ -364,52 +499,59 @@
                     <div class="existing_record" style="display: none;">
                         <hr>
                         <h4>Existing Record</h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>First Name : Edward</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Last Name: Murphy</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Email :murphy@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>Country : United States</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>City/State : Vero Beach</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Therapeutic area : Nervous System Diseases</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8"></div>
-                            <div class="col">
-                                <button type="button" class="btn btn-primary pull-right">Demerge</button>
-                                <!--<button type="button" class="btn btn-success">Create New</button>-->
-                            </div>
+                        <div class="card-block p-0">
+                            <table class="table table-bordered table-sm m-0">
+                                <thead class="">
+                                <tr>
+
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>City/State</th>
+                                    <th>Therapeutic area</th>
+                                    <th>De Merge</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+
+                                    <td>Edward</td>
+                                    <td>Murphy</td>
+                                    <td>Vero Beach</td>
+                                    <td>Nervous System Diseases</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>Edward</td>
+                                    <td>Smth</td>
+                                    <td>Beach</td>
+                                    <td>Nervous System Diseases</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </li>
                 <li class="data_list" data-toggle="tooltip" title="Compare with Existing record">
                     <a class="expand">
+                        <div class="right-arrow pull-right">+</div>
                         <div>
                             <div class="row inv_heading">
                                 <h5 class="inv_name col-md-4">John Smith </h5>
-                                <h6 class="col-md-7 merge_score">
-                                    <div class="progress" style="display: none">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped"
-                                             role="progressbar"
-                                             aria-valuenow="90.5%" aria-valuemin="0" aria-valuemax="100"
-                                             style="width:90.5%">
-                                            90.5% Merge Score
-                                        </div>
-                                    </div>
-                                </h6>
+
                             </div>
 
                         </div>
@@ -437,23 +579,60 @@
                             </div>
                         </div>
                     </a>
+
+                    <div class="existing_record" style="display: none;">
+                        <hr>
+                        <h4>Existing Record</h4>
+                        <div class="card-block p-0">
+                            <table class="table table-bordered table-sm m-0">
+                                <thead class="">
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>City/State</th>
+                                    <th>Therapeutic area</th>
+                                    <th>De Merge</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Smith</td>
+                                    <td>Hangzhou /Zhejiang</td>
+                                    <td>Bacterial Infections</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Smth</td>
+                                    <td>Hangzhou</td>
+                                    <td>Infections</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </li>
                 <li class="data_list stripped" data-toggle="tooltip" title="Compare with Existing record">
                     <a class="expand">
-                        <!--<div class="right-arrow pull-right">+</div>-->
+                        <div class="right-arrow pull-right">+</div>
                         <div>
                             <div class="row inv_heading">
                                 <h5 class=" inv_name col-md-4">Edward Murphy</h5>
-                                <h6 class="col-md-7 merge_score" style="display: none">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped"
-                                             role="progressbar"
-                                             aria-valuenow="100%" aria-valuemin="0" aria-valuemax="100"
-                                             style="width:100%">
-                                            100% Merge Score
-                                        </div>
-                                    </div>
-                                </h6>
+
                             </div>
 
                         </div>
@@ -485,52 +664,59 @@
                     <div class="existing_record" style="display: none;">
                         <hr>
                         <h4>Existing Record</h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>First Name : Edward</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Last Name: Murphy</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Email :murphy@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>Country : United States</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>City/State : Vero Beach</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Therapeutic area : Nervous System Diseases</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8"></div>
-                            <div class="col">
-                                <button type="button" class="btn btn-primary pull-right">Demerge</button>
-                                <!--<button type="button" class="btn btn-success">Create New</button>-->
-                            </div>
+                        <div class="card-block p-0">
+                            <table class="table table-bordered table-sm m-0">
+                                <thead class="">
+                                <tr>
+
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>City/State</th>
+                                    <th>Therapeutic area</th>
+                                    <th>De Merge</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+
+                                    <td>Edward</td>
+                                    <td>Murphy</td>
+                                    <td>Vero Beach</td>
+                                    <td>Nervous System Diseases</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>Edward</td>
+                                    <td>Smth</td>
+                                    <td>Beach</td>
+                                    <td>Nervous System Diseases</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </li>
                 <li class="data_list" data-toggle="tooltip" title="Compare with Existing record">
                     <a class="expand">
+                        <div class="right-arrow pull-right">+</div>
                         <div>
                             <div class="row inv_heading">
                                 <h5 class="inv_name col-md-4">John Smith </h5>
-                                <h6 class="col-md-7 merge_score">
-                                    <div class="progress" style="display: none">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped"
-                                             role="progressbar"
-                                             aria-valuenow="90.5%" aria-valuemin="0" aria-valuemax="100"
-                                             style="width:90.5%">
-                                            90.5% Merge Score
-                                        </div>
-                                    </div>
-                                </h6>
+
                             </div>
 
                         </div>
@@ -558,23 +744,60 @@
                             </div>
                         </div>
                     </a>
+
+                    <div class="existing_record" style="display: none;">
+                        <hr>
+                        <h4>Existing Record</h4>
+                        <div class="card-block p-0">
+                            <table class="table table-bordered table-sm m-0">
+                                <thead class="">
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>City/State</th>
+                                    <th>Therapeutic area</th>
+                                    <th>De Merge</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Smith</td>
+                                    <td>Hangzhou /Zhejiang</td>
+                                    <td>Bacterial Infections</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Smth</td>
+                                    <td>Hangzhou</td>
+                                    <td>Infections</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </li>
                 <li class="data_list stripped" data-toggle="tooltip" title="Compare with Existing record">
                     <a class="expand">
-                        <!--<div class="right-arrow pull-right">+</div>-->
+                        <div class="right-arrow pull-right">+</div>
                         <div>
                             <div class="row inv_heading">
                                 <h5 class=" inv_name col-md-4">Edward Murphy</h5>
-                                <h6 class="col-md-7 merge_score" style="display: none">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped"
-                                             role="progressbar"
-                                             aria-valuenow="100%" aria-valuemin="0" aria-valuemax="100"
-                                             style="width:100%">
-                                            100% Merge Score
-                                        </div>
-                                    </div>
-                                </h6>
+
                             </div>
 
                         </div>
@@ -606,34 +829,49 @@
                     <div class="existing_record" style="display: none;">
                         <hr>
                         <h4>Existing Record</h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>First Name : Edward</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Last Name: Murphy</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Email :murphy@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p>Country : United States</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>City/State : Vero Beach</p>
-                            </div>
-                            <div class="col-md-4">
-                                <p>Therapeutic area : Nervous System Diseases</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8"></div>
-                            <div class="col">
-                                <button type="button" class="btn btn-primary pull-right">Demerge</button>
-                                <!--<button type="button" class="btn btn-success">Create New</button>-->
-                            </div>
+                        <div class="card-block p-0">
+                            <table class="table table-bordered table-sm m-0">
+                                <thead class="">
+                                <tr>
+
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>City/State</th>
+                                    <th>Therapeutic area</th>
+                                    <th>De Merge</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+
+                                    <td>Edward</td>
+                                    <td>Murphy</td>
+                                    <td>Vero Beach</td>
+                                    <td>Nervous System Diseases</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>Edward</td>
+                                    <td>Smth</td>
+                                    <td>Beach</td>
+                                    <td>Nervous System Diseases</td>
+                                    <td>
+                                        <label class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input">
+                                            <span class="custom-control-indicator"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </li>
@@ -641,28 +879,34 @@
         </div>
     </div>
 </div>
-<!--<script type="text/javascript">-->
-    <!--$(function () {-->
-        <!--$(".expand").on("click", function () {-->
-            <!--$(this).next().slideToggle(200);-->
-            <!--$expand = $(this).find(">:first-child");-->
+<script type="text/javascript">
+    $(function () {
+        $(".expand").on("click", function () {
+            $(this).next().slideToggle(200);
+            $expand = $(this).find(">:first-child");
 
-            <!--if ($expand.text() == "+") {-->
-                <!--$expand.text("-");-->
-                <!--$(this).closest('li').addClass('active');-->
-            <!--} else {-->
-                <!--$expand.text("+");-->
-                <!--$(this).closest('li').removeClass('active');-->
-            <!--}-->
-        <!--});-->
-    <!--});-->
-<!--</script>-->
+            if ($expand.text() == "+") {
+                $expand.text("-");
+                $(this).closest('li').addClass('active');
+            } else {
+                $expand.text("+");
+                $(this).closest('li').removeClass('active');
+            }
+        });
+    });
+    $(document).ready(function () {
+        var list = $(document).find('span.progress_table');
+        list.each(function (i) {
+            var x = $(this).attr('id');
+            var per = $(this).data('per');
+            x = "#" + x.toString();
+            progress_obj = myFunc(x);
+            progress_obj.animate(per);
+        });
+    })
+    ;
+</script>
 
-
-</body>
-</html></title>
-</head>
-<body>
 
 </body>
 </html>
