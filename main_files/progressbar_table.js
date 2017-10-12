@@ -7,13 +7,13 @@ function myFunc(container) {
         // This has to be the same size as the maximum width to
         // prevent clipping
         strokeWidth: 15,
-        trailWidth: 1,
+        trailWidth: 15,
         easing: 'easeInOut',
         duration: 1400,
         text: {
             autoStyleContainer: false
         },
-        from: {color: '#aaa', width: 1},
+        from: {color: '#aaa', width: 15},
         to: {color: '#333', width: 15},
         // Set default step function for all animate calls
         step: function (state, circle) {
